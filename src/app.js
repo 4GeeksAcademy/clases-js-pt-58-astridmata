@@ -185,19 +185,19 @@ window.onload = function () {
 
 // ejemplo 4: creacion de frases promocionales 
 
-let adjetivos = ["Increible", "Fantastico", "Unico"]
-let productos = ["Telefono", "Reloj", "Auriculares", "Televisor"]
+// let adjetivos = ["Increible", "Fantastico", "Unico"]
+// let productos = ["Telefono", "Reloj", "Auriculares", "Televisor"]
 // let ofertas = ["En descuento", "Sin descuento"]
 
-for (let i = 0; i < adjetivos.length; i++) {
+// for (let i = 0; i < adjetivos.length; i++) {
 
-  for (let j = 0; j < productos.length; j++) {
-    console.log(adjetivos[i] + " " + productos[j] + " Compra ya!! ");
+//   for (let j = 0; j < productos.length; j++) {
+//     console.log(adjetivos[i] + " " + productos[j] + " Compra ya!! ");
     
     
-  }
+//   }
   
-}
+// }
 
 ///////////////////////////////////////////////////////////
 // bucle while
@@ -206,20 +206,105 @@ for (let i = 0; i < adjetivos.length; i++) {
 //   //codigo a ejecutar
 // }
 
-let contador = 0
-while (contador < 5) {
-  console.log(contador);
-  contador ++ // aumenta el contador en 1 para que la condicion se vuelva falsa eventualmente 
-}
+// let contador = 0
+// while (contador < 5) {
+//   console.log(contador);
+//   contador ++ // aumenta el contador en 1 para que la condicion se vuelva falsa eventualmente 
+// }
 ///ejemplo 
-let numero = 5
-while (numero > 0) {
-  console.log("Quedan " + numero + " segundos...");
-  numero-- // numero = numero -1
+// let numero = 5
+// while (numero > 0) {
+//   console.log("Quedan " + numero + " segundos...");
+//   numero-- // numero = numero -1
+// }
+// console.log("Despegue!!");
+
+
+
+
+
+///funciones//////////////
+// funcion de declaracion 
+function listaDeFrutas() {
+  let frutas = ["manzana", "naranja", "uva", "limon"]
 }
-console.log("Despegue!!");
+listaDeFrutas()
+
+
+function saludar() {
+  console.log("Hola Mundo");
+}
+saludar()
+
+//ejemplo llamada de funcion antes de la declaracion 
+suma()
+
+function suma() {
+  let resultado = 4 + 5
+  console.log(resultado);
+  
+  
+}
+
+//ejemplo con parametros
+function multiplicar(x,y) {
+  return x * y
+
+}
+let producto = multiplicar(5,10)
+console.log(producto);
+
+let producto1 = multiplicar(3,8)
+console.log(producto1);
+
+//ejemplo:
+function saludo(nombre) {
+  console.log( "hola, " + nombre + "!");
+  
+}
+saludo ("Julio") 
+saludo ("Maria") 
+saludo ("Jose") 
+
+
+/////////////////////////////funciones de expresion - funcion anonima
+
+let restar = function(a, b) {
+  return a - b
+}
+let diferencia = restar(10, 3)
+console.log(diferencia);
+
+//ejemplo:
+
+let saludar2 = function() {
+  console.log("hola desde una funcion de expresion");
+  
+}
+saludar2()
+
+//////////////// funcion flecha 
+// ejemplo:
+const duplicar = numero => numero * 2
+let resultadoDeDuplicar = duplicar(8)
+console.log(resultadoDeDuplicar);
+
+// ejemplo :
+const calcularIva = (precio) => {
+   const iva = 0.16
+   return precio * (1 + iva)
+}
+let precioTotal= calcularIva(200)
+console.log(precioTotal);
 
 
 
+//Math.floor(Math.random())
+             // 0   1     2    3    4
+let vocales = ["a", "e", "i", "o", "u"]
+//generar un indice aleatorio
+let aleatorio = Math.floor(Math.random() * vocales.length)
+
+console.log(vocales[aleatorio]);
 
 };
