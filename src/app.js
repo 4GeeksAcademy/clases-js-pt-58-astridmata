@@ -317,36 +317,36 @@ window.onload = function () {
 // {propiedad: "valor" }
 
 //declaracion del objeto:
-let persona = {
-  nombre: "Ana",
-  edad: 30,
-  esEstudiante: true,
-  cursos: ["HTML", "CSS", "JS"],
-  //las funciones cuando se encuentran dentro de un objeto se llaman metodos 
-  hablar: function () {
-    return `Hola, mi nombre es ${this.nombre}, tengo ${this.edad} años y estoy estudiando ${this.cursos.length} cursos`
-  },
-  direccion: {
-    calle: "Libertador",
-    ciudad: "Caracas"
-  },
-  "fecha de nacimiento": "20-08-1995"
-}
+// let persona = {
+//   nombre: "Ana",
+//   edad: 30,
+//   esEstudiante: true,
+//   cursos: ["HTML", "CSS", "JS"],
+//   //las funciones cuando se encuentran dentro de un objeto se llaman metodos 
+//   hablar: function () {
+//     return `Hola, mi nombre es ${this.nombre}, tengo ${this.edad} años y estoy estudiando ${this.cursos.length} cursos`
+//   },
+//   direccion: {
+//     calle: "Libertador",
+//     ciudad: "Caracas"
+//   },
+//   "fecha de nacimiento": "20-08-1995"
+// }
 
-// consultar:
-//notacion de punto .
-console.log(persona.nombre);
-console.log(persona.edad);
-console.log(persona.hablar());
-console.log(persona.direccion.ciudad);
-// console.log(persona.fecha de nacimiento ); no es correcto 
+// // consultar:
+// //notacion de punto .
+// console.log(persona.nombre);
+// console.log(persona.edad);
+// console.log(persona.hablar());
+// console.log(persona.direccion.ciudad);
+// // console.log(persona.fecha de nacimiento ); no es correcto 
 
 
-//notacion de corchetes []
-console.log(persona.cursos[1]);
-console.log(persona["fecha de nacimiento"]);
-//ultimo curso de ana
-console.log(persona.cursos[persona.cursos.length - 1]);
+// //notacion de corchetes []
+// console.log(persona.cursos[1]);
+// console.log(persona["fecha de nacimiento"]);
+// //ultimo curso de ana
+// console.log(persona.cursos[persona.cursos.length - 1]);
 
 
 
@@ -354,11 +354,11 @@ console.log(persona.cursos[persona.cursos.length - 1]);
 //templates literals
 
 // ` ${expresion}`
-let nombre = "Maria"
-let edad = 28
+// let nombre = "Maria"
+// let edad = 28
 
-let saludo = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`
-console.log(saludo);
+// let saludo = `Hola, mi nombre es ${nombre} y tengo ${edad} años.`
+// console.log(saludo);
 
 
 
@@ -376,20 +376,43 @@ console.log(saludo);
 // condicion1 ? valor_si_es_verdadera1 : (condicion2 ? valor_si_es_verdadera2 : valor_si_es_falsa2)
 
 
-let edades = 82
+// let edades = 82
 
-let puedeVotar = (edades >= 80)
-              ? "muy mayor para votar" 
-              : (edades >= 18) 
-              ? "puede votar" 
-              : "no puede votar";
-console.log(puedeVotar);
-
-
+// let puedeVotar = (edades >= 80)
+//               ? "muy mayor para votar" 
+//               : (edades >= 18) 
+//               ? "puede votar" 
+//               : "no puede votar";
+// console.log(puedeVotar);
 
 
-//ejemplo 2
-let a = 10
-let b = 5
-let resultado = a > b ? a * 2 : b / 2
-console.log(resultado);
+
+
+// //ejemplo 2
+// let a = 10
+// let b = 5
+// let resultado = a > b ? a * 2 : b / 2
+// console.log(resultado);
+
+//manipulacion del DOM 
+//encontrar el elemento
+//manipular el elemento (html y css)
+
+function cambiarEstilo() {
+  let h2 = document.getElementById("titulo-principal")
+  
+  
+  if (h2.style.backgroundColor === "") {
+    h2.style.backgroundColor = "red"
+    h2.style.fontSize = "60px"
+  } else {
+    h2.style.backgroundColor = ""
+    h2.style.fontSize = "30px"
+  }
+
+
+}
+
+document.getElementById("miBoton").addEventListener("click", cambiarEstilo)
+
+
