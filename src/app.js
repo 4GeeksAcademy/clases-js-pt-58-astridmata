@@ -410,9 +410,41 @@ function cambiarEstilo() {
     h2.style.fontSize = "30px"
   }
 
+}
+document.getElementById("miBoton").addEventListener("click", cambiarEstilo)
+
+//elemento.addEventListener(tipoDeEvento, funcionManeja, [opciones])
+// tipo de evento: click, mouseover, submit, input 
+
+//ejemplo del mouseover y mouseout (al pasar el raton y al salir de raton)
+
+//funcion para resaltar:
+function resaltar() {
+  let div = document.getElementById("caja-hover")
+  div.style.border = "4px solid orange"
+  div.style.cursor = "pointer"
+}
+
+//funcion para normalizar:
+function normalizar() {
+  let div = document.getElementById("caja-hover")
+  div.style.border = "1px solid black"
+  div.style.cursor = "default"
+}
+//seleccionamos el elemento y el escuchador al mouseover
+document.getElementById("caja-hover").addEventListener("mouseover", resaltar)
+//seleccionamos el elemento y el escuchador al mouseout
+document.getElementById("caja-hover").addEventListener("mouseout", normalizar)
+
+
+/// ejemplo de tipo input se dispara cuando el usuario agrega una letra, una modificacion
+//la funcion se ejecuta en tiempo real cada vez que el input cambia
+function contarCaracteres() {
+  let input = document.getElementById("campo-texto")
+  let contador = document.getElementById("contador-caracteres")
+
+  contador.textContent = input.value.length + " caracteres."
 
 }
 
-document.getElementById("miBoton").addEventListener("click", cambiarEstilo)
-
-
+document.getElementById("campo-texto").addEventListener("input", contarCaracteres)
